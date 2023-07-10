@@ -1,0 +1,401 @@
+<!-- Navbar 網站製作 -->
+
+<!-- 參考網站:
+https://mineralsandrocks.eu/en/
+https://www.stonexp.idv.tw/i.h -->
+
+<!-- path 可以使用網站來生成: -->
+<!-- https://yqnn.github.io/svg-path-editor/ -->
+
+<!DOCTYPE html>
+<head>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- bootstrap -->
+    <!-- https://getbootstrap.com/ 查找模組 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 中文字型 -->
+    <!-- https://fonts.google.com/ 賦予字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+TC:wght@500&family=Noto+Serif+SC:wght@300&display=swap" rel="stylesheet">
+    <!-- 英文字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+    <!--  -->
+    <!-- https://colorhunt.co/ -->
+
+    <!-- https://fontawesome.com/ 賦予小圖樣 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/68f8681dba.js" crossorigin="anonymous"></script>
+    <title>M&J.礦人工坊</title>
+
+</head>
+
+
+<body>
+
+
+    <!-- getbootstrap : Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="'pagetop">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="pictures/logo.png" width="40" height="40" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  匠人工藝
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">墜子.吊飾</a></li>
+                    <li><a class="dropdown-item" href="#">項鍊</a></li>
+                    <li><a class="dropdown-item" href="#">戒指</a></li>
+                    <li><a class="dropdown-item" href="#">球石.滾石.雕件</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">金工專區</a></li>
+                </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  礦脈零售
+                </a>
+                 <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">寶石礦物</a></li>
+                  <li><a class="dropdown-item" href="#">各類水晶</a></li>
+                  <li><a class="dropdown-item" href="#">螢光礦物</a></li>
+                </ul>
+                </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">摩氏硬度表</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">每個月生日石</a>
+                <!-- a class="nav-link disabled -->
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="請輸入關鍵字" aria-label="Search">
+              <!-- "關鍵詞搜尋"按鈕顯示 -->
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"></path>
+                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path>
+                </svg></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+    <!-- 第一個區塊banner -->
+    <section id="intro" style="background: linear-gradient(45deg, rgba(21, 252, 117, 0.9),
+                                transparent) 20%, url(pictures/index.jpg) no-repeat center;background-size: cover;">
+
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h1 class="display-4 text-light fw-medium">Minerals & jewels</h1>
+                        <p class="lead text-light mt-3">礦人工坊：品質與創新的典範。鑲嵌奇蹟，閃耀無盡。</p>
+                        <a class="btn btn-warning btn-lg" href="MShop.html" role="button">貨價一覽</a>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+<hr>
+
+    <!-- 第二個區塊banner -->
+    <section id="second">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <h3>團隊人員簡覽</h3>
+                    <div class="row">
+                        <div class="col-md-4 center">
+                            <img src="pictures/M2.png">
+                            <h5>祖亨 -"Risco"_ZuHeng</h5>
+                        </div>
+                        
+                        <div class="col-md-8 text-left">
+                            <p class="'lead">作為一位行銷人員和督導，我致力於將我們的寶石處理企業打造成一個受人尊敬和信賴的品牌。我不僅注重市場推廣和品牌建設，還負責監督和指導寶石處理團隊，確保我們提供優質的產品和服務。</p>
+                            <p>我的目標是與消費者建立良好的關係，並提供他們可靠的產品和服務。我相信透明度和信任是有效的行銷手段，因此我致力於向消費者傳遞關於我們寶石處理方法的正確信息。</p>
+                            <p>同時，作為一名督導，我負責監督和指導寶石處理團隊的工作。我確保每位團隊成員都瞭解和遵守行業標準和工作流程，以確保產品質量的一致性和高標準。我提供技術指導和培訓，以確保團隊成員不斷進步並掌握最新的寶石處理技術。</p>
+                            <br><br><br>
+                        </div>
+            
+                        
+
+                        <div class="col-md-8 text-left">
+                            <p class="'lead">寶石處理的歷史可以追溯到古代文明，人們一直在探索不同的方法來改善寶石的外觀和品質。這些處理方法的發展使得寶石行業得以繁榮發展，並且成為了當今世界上最重要的行業之一。</p>
+                            <p>然而，當涉及到購買寶石時，消費者往往會關注處理方法對寶石價值和耐用性的潛在影響。這種關注是合理的，因為消費者希望確保他們所購買的寶石是真實的、經過合理處理的，並且能夠長久保持其美麗和價值。</p>
+                            <p> 對於消費者而言，了解處理方法及其對寶石價值和耐用性的影響至關重要。作為一名寶石處理專業人員，我致力於提供透明、誠信的服務，解答消費者的疑問，確保他們能夠安心購買寶石。如果你對寶石處理有任何疑問或需要進一步的信息，請隨時與我們聯繫。</p>
+                        </div>
+
+                        <div class="col-md-4 center">
+                            <img src="pictures/M1.png">
+                            <h5>阿飛 - Shola_Afri</h5>
+                        </div>
+
+                    </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+<hr>
+
+    <section id="latest">
+         <!-- 第三個區塊 -->
+         <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>進口新品</h3>
+                    <!-- 下面, 要在新增列數就從row開始複製 -->
+                    <div class="row">
+                        <div class="col-md-4 text-left">
+                            <div class='outer'>
+                                <a href="1.html"></a>
+                                    <div class="upper">
+                                        <!-- https://www.stonexp.idv.tw/i.h?cls=610&id=11098&pg=3,3 -->
+                                        <img src="pictures/Row.11.jpg">
+                                        <!-- <div class="innertext">
+                                            <span>777</span>
+                                            <h4>A:123 B:456</h4>
+                                        </div> -->
+                                    </div>
+                                    <div class="lower">
+                                        <h3>綠碧璽純銀墜子</h3>
+                                        <span><i class="fa-sharp fa-solid fa-weight-hanging"></i>1.52</span>
+                                        <span><i class="fa-solid fa-dollar-sign"></i>1,250</span>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 text-left">
+                            <div class='outer'>
+                                <a href="1.html"></a>
+                                    <div class="upper">
+                                        <!-- https://www.stonexp.idv.tw/i.h?cls=670&id=3285&pg=3,7 -->
+                                        <img src="pictures/Row.12.jpg">
+                                        <!-- <div class="innertext">
+                                            <span>777</span>
+                                            <h4>A:123 B:456</h4>
+                                        </div> -->
+                                    </div>
+                                    <div class="lower">
+                                        <h3>綠松(土耳其石)純銀戒指</h3>
+                                        <span><i class="fa-sharp fa-solid fa-weight-hanging"></i>4.85</span>
+                                        <span><i class="fa-solid fa-dollar-sign"></i>3,500</span>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 text-left">
+                            <div class='outer'>
+                                <a href="1.html"></a>
+                                    <div class="upper">
+                                        <!-- https://www.stonexp.idv.tw/i.h?cls=610&id=10237&pg=3,5 -->
+                                        <img src="pictures/Row.13.jpg">
+                                        <!-- <div class="innertext">
+                                            <span>777</span>
+                                            <h4>A:123 B:456</h4>
+                                        </div> -->
+                                    </div>
+                                    <div class="lower">
+                                        <h3>紫水晶純銀墜子</h3>
+                                        <span><i class="fa-sharp fa-solid fa-weight-hanging"></i>3.54</span>
+                                        <span><i class="fa-solid fa-dollar-sign"></i>1,000</span>
+                                    </div>
+                            </div>
+                        </div>
+                   </div>
+
+                   <div class="row">
+                    <div class="col-md-4 text-left">
+                        <div class='outer'>
+                            <a href="1.html"></a>
+                                <div class="upper">
+                                    <img src="pictures/Row.21.jpg">
+                                    <!-- <div class="innertext">
+                                        <span>777</span>
+                                        <h4>A:123 B:456</h4>
+                                    </div> -->
+                                </div>
+                                <div class="lower">
+                                    <!-- https://www.stonexp.idv.tw/i.h?cls=610&id=10822&pg=3,4 -->
+                                    <h3>女王貝純銀墜子</h3>
+                                    <span><i class="fa-sharp fa-solid fa-weight-hanging"></i>3.80</span>
+                                    <span><i class="fa-solid fa-dollar-sign"></i>1,400</span>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-left">
+                        <div class='outer'>
+                            <a href="1.html"></a>
+                                <div class="upper">
+                                    <!-- https://www.stonexp.idv.tw/i.h?cls=610&id=11938&pg=3,1 -->
+                                    <img src="pictures/Row.22.jpg">
+                                    <!-- <div class="innertext">
+                                        <span>777</span>
+                                        <h4>A:123 B:456</h4>
+                                    </div> -->
+                                </div>
+                                <div class="lower">
+                                    <h3>拋光海象牙齒化石墜子</h3>
+                                    <span><i class="fa-sharp fa-solid fa-weight-hanging"></i>6.37</span>
+                                    <span><i class="fa-solid fa-dollar-sign"></i>800</span>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-left">
+                        <div class='outer'>
+                            <a href="1.html"></a>
+                                <div class="upper">
+                                    <!-- https://www.stonexp.idv.tw/i.h?cls=410&id=14600&pg=3,50 -->
+                                    <img src="pictures/Row.23.jpg">
+                                    <!-- <div class="innertext">
+                                        <span>777</span>
+                                        <h4>A:123 B:456</h4>
+                                    </div> -->
+                                </div>
+                                <div class="lower">
+                                    <h3>日長石(太陽石)</h3>
+                                    <span><i class="fa-sharp fa-solid fa-weight-hanging"></i>5.06</span>
+                                    <span><i class="fa-solid fa-dollar-sign"></i>1,010</span>
+                                </div>
+                        </div>
+                    </div>
+               </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+<hr>
+
+     <!-- 第四個區塊email
+    <section id="email">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <h3>加入郵件</h3>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 text-left">
+                        <p>我本人處理的工作狀況</p>
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="你的郵件">
+                        </div>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">提交</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    </footer> 
+        <div class="jumbotron mt-3">
+            <div class="container">
+            <div class="row">
+            
+                <!-- 圖像 -->
+                <div class="col-md-4">
+                    <img src="pictures/A1.png" alt="" width="500">
+                    <!-- <p>123456<br>AASC</p> -->
+                </div>
+
+                <!-- 中間段落 -->
+                <div class="col-12 col-md-4">
+                <ul>
+                <h5>M&J.礦人工坊</h5>
+                <li>地址：404 Gemstone Street, Emerald City</li>
+                <li>電話：+886 404-404-1</li>
+                <li>信箱：<a href="mailto:xy6662@yahoo.com.tw">xy6662 (yahoo)</a>
+                </ul>
+                </div>
+
+                <!-- 後段 -->
+                <div class="col-12 col-md-4">
+                    <ul>
+                    <br>
+                    <li>線上人數：1</li>
+                    <li><a href="#" class="text-dark">常見問題</a></li>
+                    <li><a href="#" class="text-dark">上架通知</a></li>
+                    <li><a href="#" class="text-dark">統計資料</a></li>
+                    </ul>
+                    </div>
+                <div class="col-12 text-center"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/tw/"><img alt="創用 CC 授權條款" 
+                        style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/tw/80x15.png"></a> <small>M&J礦人工坊®網站圖文版權採用
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/tw/" class="text-dark">
+                        創用 CC 姓名標示-非商業性-相同方式分享 3.0 台灣 授權條款</a>授權。</small></div>
+            </div>
+        </div>
+        </div>
+
+    <!-- 第五個區塊footer -->
+    <!-- <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="pictures/M2.png" alt="" width="170">
+                    <p>123456<br>AASC</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>網站地圖</h4>
+                    <ul>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="page_1.html">最新消息</a></li>
+                    </ul> 
+                    <ul>
+                        <li><a href="page_1.html">作品</a></li>
+                        <li><a href="page_1.html">聯絡我們</a></li>
+                    </ul> 
+                </div>
+
+            </div>  -->
+
+
+            <!-- 聯絡作者 (老師教導的模組) 
+             <div class="col-md-4">
+                <h4>聯絡我們</h4>
+                <p>地址：404 Gemstone Street, Emerald City, Gemland<br>
+                Phone:+886 404-404-1<br>
+                E-mail:<a href="mailto:xy6662@yahoo.com.tw">製作人信箱</a>
+                </p>
+            </div> -->
+
+
+            <!-- 回到頂端 -->
+            <div class="fixed-bottom mb-3 mr-3" style="opacity:0.8;">
+                <a href="#" class="bg-dark text-white border rounded-pill px-2 py-2 text-decoration-none">回頂端 
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-caret-up-square-fill" viewBox="0 0 16 16">
+                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 9h8a.5.5 0 0 0 .374-.832l-4-4.5a.5.5 0 0 0-.748 0l-4 4.5A.5.5 0 0 0 4 11z"></path>
+                </svg></a>
+             </div>
+
+        </div>
+    </footer> 
+</body>
+</html>

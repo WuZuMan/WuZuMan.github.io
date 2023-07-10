@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<head>
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- bootstrap -->
+    <!-- https://getbootstrap.com/ 查找模組 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 中文字型 -->
+    <!-- https://fonts.google.com/ 賦予字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+TC:wght@500&family=Noto+Serif+SC:wght@300&display=swap" rel="stylesheet">
+    <!-- 英文字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+    <!--  -->
+    <!-- https://colorhunt.co/ -->
+
+    <!-- https://fontawesome.com/ 賦予小圖樣 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/68f8681dba.js" crossorigin="anonymous"></script>
+    <title>M&J.礦人工坊</title>
+
+</head>
+
+<body>
+<!-- getbootstrap : Navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary" id="'pagetop">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="pictures/logo.png" width="40" height="40" alt="" href="#">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              匠人工藝
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">墜子.吊飾</a></li>
+                <li><a class="dropdown-item" href="#">項鍊</a></li>
+                <li><a class="dropdown-item" href="#">戒指</a></li>
+                <li><a class="dropdown-item" href="#">球石.滾石.雕件</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">金工專區</a></li>
+            </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              礦脈零售
+            </a>
+             <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">寶石礦物</a></li>
+              <li><a class="dropdown-item" href="#">各類水晶</a></li>
+              <li><a class="dropdown-item" href="#">螢光礦物</a></li>
+            </ul>
+            </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">摩氏硬度表</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">每個月生日石</a>
+            <!-- a class="nav-link disabled -->
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="請輸入關鍵字" aria-label="Search">
+          <!-- "關鍵詞搜尋"按鈕顯示 -->
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"></path>
+            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path>
+            </svg></button>
+        </form>
+      </div>
+    </div>
+</nav>
+    
+
+
+
+
+
+<body>
+
+        <!-- 主要頁面 -->
+        <!-- 引入自訂php函式 -->
+    
+    <!-- 資料庫端 -->
+    
+    <script>
+        function clean() {
+        window.location='i.h?cls=10&pg=0,1';
+    }
+    
+    function save_opn_m() {
+        var arr=new Array;
+        var url="i.h?cls=10&pg=0,1";
+        var form=document.forms["form_opn"];
+        for (var i=0; i<form.elements.opn_L.length;i++)
+        {
+            if (form.elements.opn_L[i].checked)
+            {
+                arr.push("L,"+form.elements.opn_L[i].value);
+            }
+        }
+        for (var i=0; i<form.elements.opn_H.length;i++)
+        {
+            if (form.elements.opn_H[i].checked)
+            {
+                arr.push("H,"+form.elements.opn_H[i].value);
+            }
+        }
+        for (var i=0; i<form.elements.opn_C.length;i++)
+        {
+            if (form.elements.opn_C[i].checked)
+            {
+                arr.push("C,"+form.elements.opn_C[i].value);
+            }
+        }
+        for (var i=0; i<form.elements.opn_M.length;i++)
+        {
+            if (form.elements.opn_M[i].checked)
+            {
+                arr.push("M,"+form.elements.opn_M[i].value);
+            }
+        }
+        if (arr.length>0)
+        {
+        var url=url+"&opn="+arr.join(",");
+        window.location=url;
+        }
+        else
+        {
+        alert('未選擇篩選條件！');
+        }
+    }
+    
+    function save_opn_f() {
+        var arr=new Array;
+        var url="i.h?cls=10&pg=0,1";
+        var form=document.forms["form_opn"];
+        for (var i=0; i<form.elements.opn_L.length;i++)
+        {
+            if (form.elements.opn_L[i].checked)
+            {
+                arr.push("L,"+form.elements.opn_L[i].value);
+            }
+        }
+        for (var i=0; i<form.elements.opn_Y.length;i++)
+        {
+            if (form.elements.opn_Y[i].checked)
+            {
+                arr.push("Y,"+form.elements.opn_Y[i].value);
+            }
+        }
+        for (var i=0; i<form.elements.opn_B.length;i++)
+        {
+            if (form.elements.opn_B[i].checked)
+            {
+                arr.push("B,"+form.elements.opn_B[i].value);
+            }
+        }
+        if (arr.length>0)
+        {
+        var url=url+"&opn="+arr.join(",");
+        window.location=url;
+        }
+        else
+        {
+        alert('未選擇篩選條件！');
+        }
+    }
+    
+    function save_opn_j() {
+        var arr=new Array;
+        var url="i.h?cls=10&pg=0,1";
+        var form=document.forms["form_opn"];
+        for (var i=0; i<form.elements.opn_L.length;i++)
+        {
+            if (form.elements.opn_L[i].checked)
+            {
+                arr.push("L,"+form.elements.opn_L[i].value);
+            }
+        }
+        if (arr.length>0)
+        {
+        var url=url+"&opn="+arr.join(",");
+        window.location=url;
+        }
+        else
+        {
+        alert('未選擇篩選條件！');
+        }
+    }
+    
+    function chg_class(tar,grp,cnt,wdh)
+    {
+        for (i=0;i<cnt;i++)
+        {
+            lbl=grp+"_"+i+"_label";
+            cls0='btn btn-primary px-0 py-1 mr-1 mb-1 text-center '+wdh;
+            cls1='btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center '+wdh;
+            
+            if (i==tar)
+            {
+            document.getElementById(lbl).className=cls0;
+            }
+            else
+            {
+            document.getElementById(lbl).className=cls1;
+            }
+        }
+    }
+    </script>
+    
+    <!-- 篩選條件視窗 -->
+    <div class="modal fade" id="opnwindow" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="opnLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header alert-warning">
+            <h5 class="modal-title" id="opnLabel"><b>篩選條件</b></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          <form id="form_opn" name="form_opn">
+    
+    <h6 class="alert-primary px-1 py-1 mx-0 rounded">英文字首</h6><div class="mb-3"><label for="opn_L_0" id="opn_L_0_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_0" value="a" class="d-none" onclick="chg_class('0','opn_L','26','opn-sm');">A</label><label for="opn_L_1" id="opn_L_1_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_1" value="b" class="d-none" onclick="chg_class('1','opn_L','26','opn-sm');">B</label><label for="opn_L_2" id="opn_L_2_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_2" value="c" class="d-none" onclick="chg_class('2','opn_L','26','opn-sm');">C</label><label for="opn_L_3" id="opn_L_3_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_3" value="d" class="d-none" onclick="chg_class('3','opn_L','26','opn-sm');">D</label><label for="opn_L_4" id="opn_L_4_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_4" value="e" class="d-none" onclick="chg_class('4','opn_L','26','opn-sm');">E</label><label for="opn_L_5" id="opn_L_5_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_5" value="f" class="d-none" onclick="chg_class('5','opn_L','26','opn-sm');">F</label><label for="opn_L_6" id="opn_L_6_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_6" value="g" class="d-none" onclick="chg_class('6','opn_L','26','opn-sm');">G</label><label for="opn_L_7" id="opn_L_7_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_7" value="h" class="d-none" onclick="chg_class('7','opn_L','26','opn-sm');">H</label><label for="opn_L_8" id="opn_L_8_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_8" value="i" class="d-none" onclick="chg_class('8','opn_L','26','opn-sm');">I</label><label for="opn_L_9" id="opn_L_9_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_9" value="j" class="d-none" onclick="chg_class('9','opn_L','26','opn-sm');">J</label><label for="opn_L_10" id="opn_L_10_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_10" value="k" class="d-none" onclick="chg_class('10','opn_L','26','opn-sm');">K</label><label for="opn_L_11" id="opn_L_11_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_11" value="l" class="d-none" onclick="chg_class('11','opn_L','26','opn-sm');">L</label><label for="opn_L_12" id="opn_L_12_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_12" value="m" class="d-none" onclick="chg_class('12','opn_L','26','opn-sm');">M</label><label for="opn_L_13" id="opn_L_13_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_13" value="n" class="d-none" onclick="chg_class('13','opn_L','26','opn-sm');">N</label><label for="opn_L_14" id="opn_L_14_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_14" value="o" class="d-none" onclick="chg_class('14','opn_L','26','opn-sm');">O</label><label for="opn_L_15" id="opn_L_15_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_15" value="p" class="d-none" onclick="chg_class('15','opn_L','26','opn-sm');">P</label><label for="opn_L_16" id="opn_L_16_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_16" value="q" class="d-none" onclick="chg_class('16','opn_L','26','opn-sm');">Q</label><label for="opn_L_17" id="opn_L_17_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_17" value="r" class="d-none" onclick="chg_class('17','opn_L','26','opn-sm');">R</label><label for="opn_L_18" id="opn_L_18_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_18" value="s" class="d-none" onclick="chg_class('18','opn_L','26','opn-sm');">S</label><label for="opn_L_19" id="opn_L_19_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_19" value="t" class="d-none" onclick="chg_class('19','opn_L','26','opn-sm');">T</label><label for="opn_L_20" id="opn_L_20_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_20" value="u" class="d-none" onclick="chg_class('20','opn_L','26','opn-sm');">U</label><label for="opn_L_21" id="opn_L_21_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_21" value="v" class="d-none" onclick="chg_class('21','opn_L','26','opn-sm');">V</label><label for="opn_L_22" id="opn_L_22_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_22" value="w" class="d-none" onclick="chg_class('22','opn_L','26','opn-sm');">W</label><label for="opn_L_23" id="opn_L_23_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_23" value="x" class="d-none" onclick="chg_class('23','opn_L','26','opn-sm');">X</label><label for="opn_L_24" id="opn_L_24_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_24" value="y" class="d-none" onclick="chg_class('24','opn_L','26','opn-sm');">Y</label><label for="opn_L_25" id="opn_L_25_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_L" id="opn_L_25" value="z" class="d-none" onclick="chg_class('25','opn_L','26','opn-sm');">Z</label></div><h6 class="alert-primary px-1 py-1 mx-0 rounded">摩氏硬度</h6><div class="mb-3"><label for="opn_H_0" id="opn_H_0_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_0" value="1" class="d-none" onclick="chg_class('0','opn_H','19','opn-sm');">1</label><label for="opn_H_1" id="opn_H_1_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_1" value="1.5" class="d-none" onclick="chg_class('1','opn_H','19','opn-sm');">1½</label><label for="opn_H_2" id="opn_H_2_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_2" value="2" class="d-none" onclick="chg_class('2','opn_H','19','opn-sm');">2</label><label for="opn_H_3" id="opn_H_3_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_3" value="2.5" class="d-none" onclick="chg_class('3','opn_H','19','opn-sm');">2½</label><label for="opn_H_4" id="opn_H_4_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_4" value="3" class="d-none" onclick="chg_class('4','opn_H','19','opn-sm');">3</label><label for="opn_H_5" id="opn_H_5_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_5" value="3.5" class="d-none" onclick="chg_class('5','opn_H','19','opn-sm');">3½</label><label for="opn_H_6" id="opn_H_6_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_6" value="4" class="d-none" onclick="chg_class('6','opn_H','19','opn-sm');">4</label><label for="opn_H_7" id="opn_H_7_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_7" value="4.5" class="d-none" onclick="chg_class('7','opn_H','19','opn-sm');">4½</label><label for="opn_H_8" id="opn_H_8_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_8" value="5" class="d-none" onclick="chg_class('8','opn_H','19','opn-sm');">5</label><label for="opn_H_9" id="opn_H_9_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_9" value="5.5" class="d-none" onclick="chg_class('9','opn_H','19','opn-sm');">5½</label><label for="opn_H_10" id="opn_H_10_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_10" value="6" class="d-none" onclick="chg_class('10','opn_H','19','opn-sm');">6</label><label for="opn_H_11" id="opn_H_11_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_11" value="6.5" class="d-none" onclick="chg_class('11','opn_H','19','opn-sm');">6½</label><label for="opn_H_12" id="opn_H_12_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_12" value="7" class="d-none" onclick="chg_class('12','opn_H','19','opn-sm');">7</label><label for="opn_H_13" id="opn_H_13_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_13" value="7.5" class="d-none" onclick="chg_class('13','opn_H','19','opn-sm');">7½</label><label for="opn_H_14" id="opn_H_14_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_14" value="8" class="d-none" onclick="chg_class('14','opn_H','19','opn-sm');">8</label><label for="opn_H_15" id="opn_H_15_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_15" value="8.5" class="d-none" onclick="chg_class('15','opn_H','19','opn-sm');">8½</label><label for="opn_H_16" id="opn_H_16_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_16" value="9" class="d-none" onclick="chg_class('16','opn_H','19','opn-sm');">9</label><label for="opn_H_17" id="opn_H_17_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_17" value="9.5" class="d-none" onclick="chg_class('17','opn_H','19','opn-sm');">9½</label><label for="opn_H_18" id="opn_H_18_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn-sm"><input type="radio" name="opn_H" id="opn_H_18" value="10" class="d-none" onclick="chg_class('18','opn_H','19','opn-sm');">10</label></div><h6 class="alert-primary px-1 py-1 mx-0 rounded">成分分類</h6><div class="mb-3"><label for="opn_C_0" id="opn_C_0_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_0" value="0" class="d-none" onclick="chg_class('0','opn_C','26','opn');">自然元素</label><label for="opn_C_1" id="opn_C_1_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_1" value="1" class="d-none" onclick="chg_class('1','opn_C','26','opn');">硫化物</label><label for="opn_C_2" id="opn_C_2_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_2" value="2" class="d-none" onclick="chg_class('2','opn_C','26','opn');">硫鹽礦物</label><label for="opn_C_3" id="opn_C_3_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_3" value="3" class="d-none" onclick="chg_class('3','opn_C','26','opn');">氧化物</label><label for="opn_C_4" id="opn_C_4_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_4" value="4" class="d-none" onclick="chg_class('4','opn_C','26','opn');">鹵化物</label><label for="opn_C_5" id="opn_C_5_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_5" value="5" class="d-none" onclick="chg_class('5','opn_C','26','opn');">氫氧化物</label><label for="opn_C_6" id="opn_C_6_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_6" value="6" class="d-none" onclick="chg_class('6','opn_C','26','opn');">砷化物</label><label for="opn_C_7" id="opn_C_7_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_7" value="10" class="d-none" onclick="chg_class('7','opn_C','26','opn');">碳酸鹽</label><label for="opn_C_8" id="opn_C_8_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_8" value="11" class="d-none" onclick="chg_class('8','opn_C','26','opn');">硝酸鹽</label><label for="opn_C_9" id="opn_C_9_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_9" value="12" class="d-none" onclick="chg_class('9','opn_C','26','opn');">硼酸鹽</label><label for="opn_C_10" id="opn_C_10_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_10" value="13" class="d-none" onclick="chg_class('10','opn_C','26','opn');">硫酸鹽</label><label for="opn_C_11" id="opn_C_11_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_11" value="14" class="d-none" onclick="chg_class('11','opn_C','26','opn');">鉻酸鹽</label><label for="opn_C_12" id="opn_C_12_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_12" value="15" class="d-none" onclick="chg_class('12','opn_C','26','opn');">鉬酸鹽</label><label for="opn_C_13" id="opn_C_13_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_13" value="16" class="d-none" onclick="chg_class('13','opn_C','26','opn');">鎢酸鹽</label><label for="opn_C_14" id="opn_C_14_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_14" value="17" class="d-none" onclick="chg_class('14','opn_C','26','opn');">磷酸鹽</label><label for="opn_C_15" id="opn_C_15_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_15" value="18" class="d-none" onclick="chg_class('15','opn_C','26','opn');">砷酸鹽</label><label for="opn_C_16" id="opn_C_16_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_16" value="19" class="d-none" onclick="chg_class('16','opn_C','26','opn');">釩酸鹽</label><label for="opn_C_17" id="opn_C_17_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_17" value="20" class="d-none" onclick="chg_class('17','opn_C','26','opn');">矽酸鹽</label><label for="opn_C_18" id="opn_C_18_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_18" value="21" class="d-none" onclick="chg_class('18','opn_C','26','opn');">鈮酸鹽</label><label for="opn_C_19" id="opn_C_19_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_19" value="22" class="d-none" onclick="chg_class('19','opn_C','26','opn');">草酸鹽</label><label for="opn_C_20" id="opn_C_20_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_20" value="30" class="d-none" onclick="chg_class('20','opn_C','26','opn');">火成岩</label><label for="opn_C_21" id="opn_C_21_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_21" value="31" class="d-none" onclick="chg_class('21','opn_C','26','opn');">變質岩</label><label for="opn_C_22" id="opn_C_22_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_22" value="32" class="d-none" onclick="chg_class('22','opn_C','26','opn');">沉積岩</label><label for="opn_C_23" id="opn_C_23_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_23" value="40" class="d-none" onclick="chg_class('23','opn_C','26','opn');">隕石</label><label for="opn_C_24" id="opn_C_24_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_24" value="41" class="d-none" onclick="chg_class('24','opn_C','26','opn');">混合礦物</label><label for="opn_C_25" id="opn_C_25_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_C" id="opn_C_25" value="50" class="d-none" onclick="chg_class('25','opn_C','26','opn');">人造物</label></div><h6 class="alert-primary px-1 py-1 mx-0 rounded">晶系分類</h6><div class="mb-3"><label for="opn_M_0" id="opn_M_0_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_M" id="opn_M_0" value="0" class="d-none" onclick="chg_class('0','opn_M','9','opn');">等軸</label><label for="opn_M_1" id="opn_M_1_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_M" id="opn_M_1" value="1" class="d-none" onclick="chg_class('1','opn_M','9','opn');">正方</label><label for="opn_M_2" id="opn_M_2_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_M" id="opn_M_2" value="2" class="d-none" onclick="chg_class('2','opn_M','9','opn');">單斜</label><label for="opn_M_3" id="opn_M_3_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_M" id="opn_M_3" value="3" class="d-none" onclick="chg_class('3','opn_M','9','opn');">三斜</label><label for="opn_M_4" id="opn_M_4_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_M" id="opn_M_4" value="4" class="d-none" onclick="chg_class('4','opn_M','9','opn');">斜方</label><label for="opn_M_5" id="opn_M_5_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_M" id="opn_M_5" value="5" class="d-none" onclick="chg_class('5','opn_M','9','opn');">三方</label><label for="opn_M_6" id="opn_M_6_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_M" id="opn_M_6" value="6" class="d-none" onclick="chg_class('6','opn_M','9','opn');">六方</label><label for="opn_M_7" id="opn_M_7_label" class="btn btn-outline-secondary px-0 py-1 mr-1 mb-1 text-center opn"><input type="radio" name="opn_M" id="opn_M_7" value="10" class="d-none" onclick="chg_class('7','opn_M','9','opn');">非晶質</label></div>	
+    
+    
+            </form></div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger mr-2" onclick="clean();">恢復預設值</button><button type="button" class="btn btn-success" onclick="save_opn_m();">送出</button>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+    
+    <div class="jumbotron">
+    
+    <h3>資料：新品全覽上架</h3>
+    <hr class="my-2">
+    
+    <!-- 生成標題下方的篩選條件
+    <button type="button" class="btn btn-secondary mb-2 btn-sm" data-toggle="modal" data-target="#opnwindow">篩選條件</button>
+    <div class="btn btn-outline-danger btn_title btn-sm mb-2 mr-1 mouse border-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+      <path d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"></path>
+    </svg>點左邊按鈕可以設定資料顯示規則</div></div> -->
+    
+    <!--頁數選單-->
+    <!-- 給頁數選單用的資料 -->
+    
+    <!-- 到指定頁面的功能 -->
+    <script type="text/javascript">
+    function goto_pg()
+    {
+        var page_num=prompt("請輸入 1 到 3 之間的頁數：","1");
+        var re = /^[0-9]+$/;
+        if (!re.test(page_num))
+        {
+        alert("只能輸入數字且不能為空白！");
+        return false;
+        }
+        if (page_num < 1)
+        {
+        alert("頁數須大於 1！");
+        return false;
+        }
+        if (page_num <= 3 && page_num > 0)
+        {
+            window.location='i.h?cls=10&pg=0,' + page_num	}
+        else
+        {
+        alert("超過總頁數！");
+        return false;
+        }
+    }
+    
+    function goto_odr(odr)
+    {
+        var odr=odr+",1";
+        window.location='i.h?cls=10&pg='+ odr;}
+    </script>
+    
+    <!-- 頁數選單 -->
+    <div class="container">
+    <div class="row">
+    <div class="col">
+    
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+          
+              <li class="page-item active"><span class="page-link">1</span></li><li class="page-item"><a class="page-link" href="MShop&amp;pg=0,2">2</a></li><li class="page-item ml-2"><a class="page-link" href="MShop&amp;pg=0,3">3</a></li>		<li class="page-item ml-2"><a class="page-link" href="#" onclick="goto_pg();" data-toggle="tooltip" data-placement="right" title="" data-original-title="輸入欲到達頁數直接跳轉">到</a></li>
+           
+          </ul>
+        </nav>
+        
+    </div>
+    </div>
+    </div>
+    <!-- 多欄主體 -->
+    <section id="data_list">
+    <div class="container">
+    <div class="row">
+    
+    <div class="col-6 col-lg-4 col-md-6 mb-2 mx-0 px-1"><div class="card"><a href="i.h?cls=100&amp;id=645&amp;pg=0,1"><img src="pictures/Row.11.jpg" class="card-img-top"></a>
+        <div class="card-body px-2 border-top"><h5 class="card-title">綠碧璽純銀墜子</h5>
+            <h6 class="card-subtitle text-muted" style="height: 3em;"><small>Green Light</small></h6><div class="container"><div class="row px-1"><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-tags">分類</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">墜飾</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-sharp fa-solid fa-weight-hanging">重量</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">1.52</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-dollar-sign">價格</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">1,250</div>
+
+                </div></div></div></div></div>     
+
+        <div class="col-6 col-lg-4 col-md-6 mb-2 mx-0 px-1"><div class="card"><a href="i.h?cls=100&amp;id=645&amp;pg=0,1"><img src="pictures/Row.12.jpg" class="card-img-top"></a>
+        <div class="card-body px-2 border-top"><h5 class="card-title">綠松(土耳其石)純銀戒指</h5>
+            <h6 class="card-subtitle text-muted" style="height: 3em;"><small>Turky Green</small></h6><div class="container"><div class="row px-1"><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-tags">分類</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">戒指</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-sharp fa-solid fa-weight-hanging">重量</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">4.85</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-dollar-sign">價格</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">3,500</div>
+
+                </div></div></div></div></div> 
+                
+                <div class="col-6 col-lg-4 col-md-6 mb-2 mx-0 px-1"><div class="card"><a href="i.h?cls=100&amp;id=645&amp;pg=0,1"><img src="pictures/Row.13.jpg" class="card-img-top"></a>
+        <div class="card-body px-2 border-top"><h5 class="card-title">紫水晶純銀墜子</h5>
+            <h6 class="card-subtitle text-muted" style="height: 3em;"><small>Purple Light</small></h6><div class="container"><div class="row px-1"><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-tags">分類</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">墜飾</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-sharp fa-solid fa-weight-hanging">重量</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">3.51</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-dollar-sign">價格</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">1,000</div>
+
+                </div></div></div></div></div> 
+
+                <div class="col-6 col-lg-4 col-md-6 mb-2 mx-0 px-1"><div class="card"><a href="i.h?cls=100&amp;id=645&amp;pg=0,1"><img src="pictures/Row.21.jpg" class="card-img-top"></a>
+        <div class="card-body px-2 border-top"><h5 class="card-title">女王貝純銀墜子</h5>
+            <h6 class="card-subtitle text-muted" style="height: 3em;"><small>Queen Star</small></h6><div class="container"><div class="row px-1"><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-tags">分類</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">生物金屬</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-sharp fa-solid fa-weight-hanging">重量</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">3.80</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-dollar-sign">價格</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">1,400</div>
+
+                </div></div></div></div></div> 
+
+                <div class="col-6 col-lg-4 col-md-6 mb-2 mx-0 px-1"><div class="card"><a href="i.h?cls=100&amp;id=645&amp;pg=0,1"><img src="pictures/Row.22.jpg" class="card-img-top"></a>
+        <div class="card-body px-2 border-top"><h5 class="card-title">拋光海象牙齒化石墜子</h5>
+            <h6 class="card-subtitle text-muted" style="height: 3em;"><small>Sea Elef Tooth</small></h6><div class="container"><div class="row px-1"><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-tags">分類</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">生物金屬</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-sharp fa-solid fa-weight-hanging">重量</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">6.37</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-dollar-sign">價格</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">800</div>
+
+                </div></div></div></div></div> 
+
+                <div class="col-6 col-lg-4 col-md-6 mb-2 mx-0 px-1"><div class="card"><a href="i.h?cls=100&amp;id=645&amp;pg=0,1"><img src="pictures/Row.23.jpg" class="card-img-top"></a>
+        <div class="card-body px-2 border-top"><h5 class="card-title">日長石(太陽石)</h5>
+            <h6 class="card-subtitle text-muted" style="height: 3em;"><small>Sun Stone</small></h6><div class="container"><div class="row px-1"><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-tags">分類</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">礦物</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-sharp fa-solid fa-weight-hanging">重量</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">5.06</div><div class="col-4 col-md-2 alert bg_light mb-2 px-1 py-1 text-center fa-solid fa-dollar-sign">價格</div>
+                    <div class="col-8 col-md-4 alert mb-2 py-1 pl-2 pr-1">1,010</div>
+
+                </div></div></div></div></div> 
+    
+
+    </div>
+    </div>
+    </section>
+    
+    <!--頁數選單-->
+    <!-- 給頁數選單用的資料 -->
+    
+    <!-- 到指定頁面的功能 -->
+    <script type="text/javascript">
+    function goto_pg()
+    {
+        var page_num=prompt("請輸入 1 到 3 之間的頁數：","1");
+        var re = /^[0-9]+$/;
+        if (!re.test(page_num))
+        {
+        alert("只能輸入數字且不能為空白！");
+        return false;
+        }
+        if (page_num < 1)
+        {
+        alert("頁數須大於 1！");
+        return false;
+        }
+        if (page_num <= 3 && page_num > 0)
+        {
+            window.location='i.h?cls=10&pg=0,' + page_num	}
+        else
+        {
+        alert("超過總頁數！");
+        return false;
+        }
+    }
+    
+    function goto_odr(odr)
+    {
+        var odr=odr+",1";
+        window.location='i.h?cls=10&pg='+ odr;}
+    </script>
+    
+    <!-- 頁數選單 -->
+    <div class="container">
+    <div class="row">
+    <div class="col">
+    
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+          
+              <li class="page-item active"><span class="page-link">1</span></li>
+              <li class="page-item"><a class="page-link" href="i.h?cls=10&amp;pg=0,2">2</a></li>
+              <li class="page-item ml-2"><a class="page-link" href="i.h?cls=10&amp;pg=0,3">3</a></li>
+              <li class="page-item ml-2"><a class="page-link" href="#" onclick="goto_pg();" data-toggle="tooltip" data-placement="right" title=""
+                  data-original-title="輸入欲到達頁數直接跳轉">到</a></li>
+            
+          </ul>
+        </nav>
+        
+    </div>
+    </div>
+    </div>
+    <!--頁面說明-->
+        
+    
+   
+    
+    <!-- 頁面說明 Modal -->
+    <div class="modal fade" id="tipswindow" tabindex="-1" role="dialog" aria-labelledby="tipswindowLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header alert-warning">
+            <h5 class="modal-title" id="tipswindowLabel"><b>頁面說明</b></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body mb-2">
+                  </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Go to Top -->
+    <div class="fixed-bottom mb-3 mr-3" style="opacity:0.8;">
+    <a href="#pagetop" class="bg-dark text-white border rounded-pill px-2 py-2 text-decoration-none">回頂端 
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-caret-up-square-fill" viewBox="0 0 16 16">
+      <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 9h8a.5.5 0 0 0 .374-.832l-4-4.5a.5.5 0 0 0-.748 0l-4 4.5A.5.5 0 0 0 4 11z"></path>
+    </svg></a>
+    </div>
+
+</footer> 
+<!-- 頁尾 -->
+<div class="jumbotron mt-3">
+    <div class="container">
+    <div class="row">
+    
+        <!-- 圖像 -->
+        <div class="col-md-4">
+            <img src="pictures/A1.png" alt="" width="500">
+            <!-- <p>123456<br>AASC</p> -->
+        </div>
+
+        <!-- 中間段落 -->
+        <div class="col-12 col-md-4">
+        <ul>
+        <h5>M&J.礦人工坊</h5>
+        <li>地址：404 Gemstone Street, Emerald City</li>
+        <li>電話：+886 404-404-1</li>
+        <li>信箱：<a href="mailto:xy6662@yahoo.com.tw">xy6662 (yahoo)</a>
+        </ul>
+        </div>
+
+        <!-- 後段 -->
+        <div class="col-12 col-md-4">
+            <ul>
+            <br>
+            <li>線上人數：1</li>
+            <li><a href="#" class="text-dark">常見問題</a></li>
+            <li><a href="#" class="text-dark">上架通知</a></li>
+            <li><a href="#" class="text-dark">統計資料</a></li>
+            </ul>
+            </div>
+        <div class="col-12 text-center"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/tw/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/tw/80x15.png"></a> <small>M&J礦人工坊®網站圖文版權採用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/tw/" class="text-dark">創用 CC 姓名標示-非商業性-相同方式分享 3.0 台灣 授權條款</a>授權。</small></div>
+    </div>
+</div>
+</div>
+<!-- 回到頂端 -->
+<div class="fixed-bottom mb-3 mr-3" style="opacity:0.8;">
+    <a href="#" class="bg-dark text-white border rounded-pill px-2 py-2 text-decoration-none">回頂端 
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-caret-up-square-fill" viewBox="0 0 16 16">
+        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 9h8a.5.5 0 0 0 .374-.832l-4-4.5a.5.5 0 0 0-.748 0l-4 4.5A.5.5 0 0 0 4 11z"></path>
+    </svg></a>
+ </div>
+
+</div>
+</footer>
+    </body>
+</html>
+
