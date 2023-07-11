@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/luchywheel.css">
+        <title>幸運轉輪</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="setBtn">
+                <div class="2017Btn" @click="clickYear('./luckywheel2017.json')">測試用</div>
+                <div class="2018Btn" @click="clickYear('./luckywheel2018.json')">8-Ball諮詢</div>
+            </div>
+            <div class="prize" v-if="isShow">
+                <div>WHEEL<span style="visibility:hidden">!</span><br>DONE!</div>
+                <div>
+                    轉輪擊中!!
+                    <div v-text="award">
+                        
+                    </div>
+                </div>
+            </div> 
+            <div class="wheel">
+                <!--扇面-->
+                <div class="wheelInner">
+                    
+                </div>
+
+                <!--資料內容-->
+                <div class="prizeSet" v-if="url ==='./luckywheel2017.json'">
+                    <template v-for="(item, index) in prizes">
+                        <div :style="setDegree(index)" class="prizeSetInner">
+                            <i class="material-icons" v-text="item.icon"></i>
+                            <p v-text="item.name"></p>
+                            <div v-text="item.amount"></div>
+                        </div>
+                    </template>
+                </div>
+                <div class="prizeSet" v-else-if="url ==='./luckywheel2018.json'">
+                    <template v-for="(key, index) in prizes">
+                        <div :style="setDegree(index)" class="prizeSetInner">
+                            <span v-text="key.name"></span>
+                            <div v-text="key.amount"></div>
+                        </div>
+                    </template>
+                </div>
+                
+                <!--外框及指針-->
+                <img src="img/wheel-outside.svg">
+                <div class="textPress">中!</div>
+                <img src="img/hand.svg" class="pointer" @click="rotatePrize()">
+            </div>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.8/vue.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js'></script>
+        <script src="js/luckywheel.js"></script>
+    </body>
+</html>
+

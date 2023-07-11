@@ -1,0 +1,32 @@
+[
+    {
+      "name": "10,000埃及鎊",
+      "icon": "10k",
+      "amount": 4
+    },
+    {
+      "name": "一車黎巴嫩鎊", 
+      "icon": "local_shipping",
+      "amount": 2
+    },
+    {
+      "name": "2,500玻利維亞幣",
+      "icon": "2k_plus",
+      "amount": 3
+    },
+    {
+      "name": "300百幕大元",
+      "icon": "burst_mode",
+      "amount": 4
+    },
+    {
+      "name": "800斐濟元",
+      "icon": "filter_8",
+      "amount": 2
+    },
+    {
+      "name": "1,000文萊元",
+      "icon": "1k",
+      "amount": 3
+    }
+]
